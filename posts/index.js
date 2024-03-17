@@ -1,9 +1,11 @@
 const express = require("express");
 const { randomBytes } = require("crypto");
 const bodyParser = require("body-parser");
-
+const cors = require("cors");
 const app = express();
+
 app.use(bodyParser.json());
+app.use(cors());
 //이번에는 DB대신 메모리에 저장
 const posts = {};
 
