@@ -29,7 +29,7 @@ app.post("/events", (req, res) => {
 });
 
 app.get("/events", (req, res) => {
-  app.send(events);
+  res.send(events);
 });
 app.listen(4005, () => {
   console.log("Listening on 4005");
